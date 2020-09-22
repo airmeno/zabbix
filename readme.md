@@ -9,7 +9,7 @@ NGINX.
 
 Start Installation Script: 
 
-sudo sh zabbix-install.sh
+<code> sudo sh zabbix-install.sh
 
 ---
 
