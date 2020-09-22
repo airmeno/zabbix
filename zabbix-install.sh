@@ -20,9 +20,11 @@ sudo apt install zabbix-nginx-conf -y
 sudo apt install zabbix-agent -y
 sudo apt install git curl php-curl mc htop -y
 
-
+### 45Yn9aURSI6j - MySQL (MariaDB) zabbix user password. Replace with your password
+### This password must be changed in the file /etc/zabbix/zabbix_server.conf for the parameter DBPassword=45Yn9aURSI6j
+###
 sudo mysql -uroot -e "create database zabbix character set utf8 collate utf8_bin;"
-sudo mysql -uroot -e "grant all privileges on zabbix.* to zabbix@localhost identified by '45Yn9aURSI6j';"
+sudo mysql -uroot -e "grant all privileges on zabbix.* to zabbix@localhost identified by '45Yn9aURSI6j';" 
 sudo mysql -uroot -e "FLUSH PRIVILEGES;"
 sudo mysql -uroot -e "quit"
 
