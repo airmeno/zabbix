@@ -24,12 +24,12 @@ sudo mysql -uroot -e "quit"
 
 sudo zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | sudo mysql -uzabbix zabbix -p45Yn9aURSI6j
 
-sudo git clone https://github.com/vasyakrg/zabbix-alert-scripts.git /usr/lib/zabbix/alertscripts
+sudo git clone https://github.com/airmeno/zabbix.git /usr/lib/zabbix/alertscripts
 sudo chown -R zabbix:root /usr/lib/zabbix/alertscripts
 
 sudo cp ~/zabconf/zabbix_server.conf /etc/zabbix
-sudo cp ~/zabconf/apache.conf /etc/zabbix
+sudo cp ~/zabconf/nginx.conf /etc/zabbix
+sudo cp ~/zabconf/php-fpm.conf /etc/zabbix
 
-sudo service apache2 restart
-sudo service zabbix-server start
-sudo update-rc.d zabbix-server enable
+sudo systemctl restart zabbix-server zabbix-agent nginx php7.4-fpm
+sudo systemctl enable zabbix-server zabbix-agent nginx php7.4-fpm
