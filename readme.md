@@ -1,9 +1,9 @@
 # Zabbix 5 LTS installation script 
 
 Server configuration:
-Linux Ubuntu 20
-MySQL (MariaDB)
-NGINX
+Linux Ubuntu 20,
+MySQL (MariaDB),
+NGINX.
 
 ---
 
