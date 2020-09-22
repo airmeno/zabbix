@@ -20,6 +20,7 @@ sudo apt install zabbix-nginx-conf -y
 sudo apt install zabbix-agent -y
 sudo apt install git curl php-curl mc htop -y
 
+###
 ### 45Yn9aURSI6j - MySQL (MariaDB) zabbix user password. Replace with your password
 ### This password must be changed in the file /etc/zabbix/zabbix_server.conf for the parameter DBPassword=45Yn9aURSI6j
 ###
@@ -31,10 +32,6 @@ sudo mysql -uroot -e "quit"
 sudo zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | sudo mysql -uzabbix zabbix -p45Yn9aURSI6j
 
 sudo git clone https://github.com/airmeno/zabbix.git ~/zabbix
-
-sudo cp ~/zabbix/zabbix_telegram_alert.sh /usr/lib/zabbix/alertscripts
-sudo chown -R zabbix:root /usr/lib/zabbix/alertscripts
-sudo chmod +x /usr/lib/zabbix/alertscripts/zabbix_telegram_alert.sh
 
 sudo cp ~/zabbix/zabconf/zabbix_server.conf /etc/zabbix
 sudo cp ~/zabbix/zabconf/nginx.conf /etc/zabbix
