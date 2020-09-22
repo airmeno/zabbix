@@ -22,7 +22,7 @@ Edit file /etc/zabbix/nginx.conf:
 server_name example.com;
 
 ---
-Edit file /etc/zabbix/php-fpm.conf:
+Edit file /etc/zabbix/php-fpm.conf: (replace with your region)
 
 php_value[date.timezone] = Europe/Moscow
 
