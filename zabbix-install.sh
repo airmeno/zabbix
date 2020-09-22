@@ -6,8 +6,8 @@
 ## Zabbix 5 - Ubuntu 20 - MySQL - NGINX
 ####################################################
 
-sudo wget https://repo.zabbix.com/zabbix/4.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.0-2+bionic_all.deb
-sudo dpkg -i zabbix-release_4.0-2+bionic_all.deb
+sudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
 sudo apt update
 
 sudo apt install zabbix-server-mysql -y
@@ -30,9 +30,9 @@ sudo cp ~/zabbix/zabbix_telegram_alert.sh /usr/lib/zabbix/alertscripts
 sudo chown -R zabbix:root /usr/lib/zabbix/alertscripts
 sudo chmod +x /usr/lib/zabbix/alertscripts/zabbix_telegram_alert.sh
 
-sudo cp ~/zabconf/zabbix_server.conf /etc/zabbix
-sudo cp ~/zabconf/nginx.conf /etc/zabbix
-sudo cp ~/zabconf/php-fpm.conf /etc/zabbix
+sudo cp ~/zabbix/zabconf/zabbix_server.conf /etc/zabbix
+sudo cp ~/zabbix/zabconf/nginx.conf /etc/zabbix
+sudo cp ~/zabbix/zabconf/php-fpm.conf /etc/zabbix
 
 sudo systemctl restart zabbix-server zabbix-agent nginx php7.4-fpm
 sudo systemctl enable zabbix-server zabbix-agent nginx php7.4-fpm
