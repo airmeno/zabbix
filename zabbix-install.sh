@@ -10,10 +10,12 @@ sudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/z
 sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
 sudo apt update
 
+
 sudo apt install zabbix-server-mysql -y
 sudo apt install zabbix-frontend-php -y
 sudo apt install zabbix-nginx-conf -y
 sudo apt install zabbix-agent -y
+sudo apt install mariadb-server -y
 sudo apt install git curl php-curl mc htop -y
 
 
