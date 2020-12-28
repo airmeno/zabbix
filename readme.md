@@ -33,4 +33,5 @@ php_value[date.timezone] = Europe/Moscow
 ```
 ### Connect 
 =================
+
 Connect to your newly installed Zabbix frontend: http://server_ip_or_name
