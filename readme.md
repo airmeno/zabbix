@@ -10,9 +10,9 @@ Install
 =================
 
 Start Installation Script: 
-
+```
 sudo sh zabbix-install.sh
-
+```
 Configure
 =================
 
@@ -21,14 +21,14 @@ This password must be changed in the file /etc/zabbix/zabbix_server.conf for the
 
 
 - Edit file /etc/zabbix/nginx.conf:
-
+```
 server_name example.com;
-
+```
 
 - Edit file /etc/zabbix/php-fpm.conf: (replace with your region)
-
+```
 php_value[date.timezone] = Europe/Moscow
-
+```
 Connect 
 =================
 Connect to your newly installed Zabbix frontend: http://server_ip_or_name
