@@ -3,9 +3,9 @@
 **Server configuration:**
 
 ```
-Linux Ubuntu 20,
-MySQL (MariaDB),
-NGINX.
+Linux Ubuntu 20
+MySQL (MariaDB)
+NGINX
 ```
 
 ### Install 
